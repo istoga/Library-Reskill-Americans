@@ -9,24 +9,30 @@
 </head>
 <body>
     <nav>
-        <div class="logo-section">
-            <a href="index.html"><img src="./img/GOLDPEACHCOUNTY.png" alt="library-name" class="logo"></a>
-            <div class="logo-text">
-                <div class="yellow-bar"></div>
-                <p>virginia</p>
-                <div class="yellow-bar"></div>
+        <ul>
+            <div class="logo-section">
+                <a href="index.html"><img src="./img/GOLDPEACHCOUNTY.png" alt="library-name" class="logo"></a>
+                <div class="logo-text">
+                    <div class="yellow-bar"></div>
+                    <p>virginia</p>
+                    <div class="yellow-bar"></div>
+                </div>
             </div>
-        </div>
-        <li>Residents</li>
-        <li>Location & Hours</li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="book-listing.html">Books & More</a></li>
-        <li>My Account</li>
-        <li>My Cart</li>
-        <div class="search">
-            <input type="text" placeholder="Search..." class="search-bar">
-            <img src="./img/search-icon.png" alt="search-icon" class="search-icon">
-        </div>
+            <li class="list">Residents</li>
+            <li class="list">Location & Hours</li>
+            <li class="list"><a href="about.html">About Us</a></li>
+            <li class="list"><a href="book-listing.html">Books & More</a></li>
+            <li class="list">My Account</li>
+            <li class="list">My Cart</li>
+            <div class="search">
+                <input type="text" placeholder="Search..." class="search-bar">
+                <img src="./img/search-icon.png" alt="search-icon" class="search-icon">
+            </div>
+
+        </ul>
+        <a href="#" class="toggle-button toggle">
+            <img src="./img/book-menu.svg" class="menu-bars">
+        </a>
     </nav>
 
     <h1>Welcome!</h1>
@@ -42,27 +48,27 @@
             <div class="pass">
                 <input type="text" placeholder="Password*">
                 <label for="password"></label>
-                <img src="./img/eye.png" alt="eye" width="25px" height="25px">
+                <img src="./img/eye.png" alt="eye" width="25px" height="25px" />
             </div>
             <div class="under-pass">
                     <div>
                         <input type="checkbox">Keep me signed in
-                        <img src="./img/circle.png" width="20px" height="20px"><img src="./img/i.png" width="5px" height="10px" class="second-img-under-pass">
+                        <img src="./img/circle.png" width="20px" height="20px" alt="circle" /><img src="./img/i.png" width="5px" height="10px" class="second-img-under-pass" alt="letter i" />
                     </div>
                     <p>Forgot Password?</p>
             </div>
-            <div>
+            <div class="button-form">
                 <button type="submit" value="Sign in" class="form-btn">Sign in</button>
             </div>
         
         </form>
         <hr>
         <form class="sign-up-form">
-            <div class="form-bottom">
-                <p>Need to sign up?</p>
-                <button><a href="account-create.html">Create Account</a></button>
+                <h2>Need to sign up?</h2>
+                <div>
+                    <a href="account-create.html" class="form-btn-sign">Create Account</a>
+                </div>
                 <p class="terms">Terms of Use & Privacy Policy</p>
-            </div>
         </form>
         
         

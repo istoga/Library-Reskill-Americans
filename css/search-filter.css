@@ -7,9 +7,10 @@
 
 body {
     font-family: "Jaldi", sans-serif;
+    font-size: 18px;
 }
 
-nav {
+nav > ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -24,8 +25,13 @@ nav {
     width: 3.5rem;
 }
 
-nav > li {
+nav > ul {
     list-style-type: none;
+}
+
+li > a {
+    text-decoration: none;
+    color: #fffefe;
 }
 
 .logo {
@@ -85,12 +91,14 @@ nav > li {
 .search-results-bar {
     display: flex;
     align-items: center;
-    padding: 3rem 0;
+    width: 100%;
 }
 
 .stephen-search-term {
     position: relative;
-    left: 15rem;
+    left: 14rem;
+    width: 200px;
+    height: 25px;
 }
 
 .filter-stephen-king {
@@ -109,18 +117,27 @@ nav > li {
 
 .second-search-section {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 .author {
     display: flex;
     flex-direction: column;
-    /* padding: 5rem 0 0 15rem; */
+    padding: 2rem 0 0 12rem;
     line-height: 2;
 }
 
 .filter-categories {
     display: grid;
-    
+    padding: 0 20.55rem 0 0;
+}
+
+.img-search-gray-bar {
+    width: 1200px;
+    height: auto;
+}
+
+.img-search-filter-gray-bar {
+    width: 110px;
 }
 
 .gray-square {
@@ -160,4 +177,120 @@ nav > li {
 
 footer {
     text-align: right;
+}
+
+
+/* Media Queries */
+
+@media (max-width: 825px) {
+    ul > li {
+        display: none;
+    }
+
+    .search-results-bar > img {
+        display: none;
+    }
+
+    .filter-categories {
+        display: none;
+    }
+
+    .second-search-section {
+        display: none;
+    }
+
+    .book-grid {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 826px) and (max-width: 1150px) {
+    ul > li {
+        display: none;
+    }
+
+
+    .search-results-bar > img {
+        display: none;
+    }
+    
+    .filter-categories {
+        display: none;
+    }
+
+    .second-search-section {
+        display: none;
+    }
+
+    .book-grid > div > img {
+        width: 150px;
+    }
+
+}
+
+
+
+@media (min-width: 1151px) and (max-width: 1360px) {
+    ul > li {
+        display: none;
+    }
+    
+    
+    .filter-categories {
+        display: none;
+    }
+
+    div.search-results-bar {
+        
+    }
+
+    .stephen-search-term {
+        left: 22rem;
+        width: 30rem;
+    }
+
+    .filter {
+        width: 6rem;
+    }
+
+    .filter-stephen-king {
+        right: 3rem;
+    }
+
+    .book-grid > div > img {
+        width: 150px;
+    }
+}
+
+@media (min-width: 1361px) and (max-width: 1500px) {
+    ul > li {
+        display: none;
+    }
+    
+    .filter-categories {
+        display: none;
+    }
+
+    .filter {
+        width: 8rem;
+    }
+
+    .filter-stephen-king {
+        right: 3rem;
+    }
+
+    .book-grid > div > img {
+        width: 150px;
+    }
+}
+
+@media (min-width: 1501px) {
+    .nav-toggle {
+        display: none;
+    }
+    
+    .filter-categories {
+        display: none;
+    }
 }

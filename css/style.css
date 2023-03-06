@@ -6,9 +6,10 @@
 
 body {
     font-family: "Jaldi", sans-serif;
+    font-size: 18px;
 }
 
-nav {
+nav > ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -23,8 +24,31 @@ nav {
     width: 3.5rem;
 }
 
-nav > li {
+nav > ul {
     list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #FFFEFE;
+}
+
+.toggle-button {
+    position: absolute;
+    top: 1.25rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
 }
 
 .logo {
@@ -115,7 +139,7 @@ nav > li {
 .hero-img-1 {
     background: url(/img/girl.png);
     background-size: cover;
-     justify-self: stretch;
+    justify-self: stretch;
     align-self: stretch;
     
     background-repeat: no-repeat;
@@ -202,7 +226,7 @@ nav > li {
 }
 
 
-/* About Page */
+/********** About Page **************/
 
 .container {
     display: flex;
@@ -305,10 +329,6 @@ ul li {
 }
 
 
-
-
-
-
 /* Styling the rows of books */
 .container-books {
 border: 2px solid red;
@@ -329,4 +349,200 @@ justify-content: space-around;
     .hero-columns {
         grid-auto-flow: column;
     }
+}
+
+/******** Media Query **********/
+
+/* Main Page */
+
+@media (max-width: 600px) {
+    body {
+        font-size: 1rem;
+
+    }
+
+    .toggle-button {
+        display: flex;
+        align-items: center;
+    }
+
+    ul > li {
+        display: none;
+    }
+
+    .search {
+        display: none;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .hero {
+        width: 100%;
+    }
+
+    .hero-columns {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .yellow-bar-hero > h1 {
+        padding: 0 1rem;
+        text-align: center;
+    }
+
+    .purple-bar h2,
+    .purple-bar p {
+        width: 100%;
+        padding: 1rem;
+    }
+} 
+
+@media (min-width: 601px) and (max-width: 1375px) {
+    body {
+        font-size: 1rem;
+    }
+
+    .toggle-button {
+        display: flex;
+        align-items: center;
+    }
+
+    ul > li {
+        display: none;
+    }
+
+    .hero-columns {
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        grid-auto-rows: minmax(600px, 600px);
+        padding-bottom: 112.5rem;
+    }
+
+    .hero-img-1 {
+        grid-column: 1;
+        grid-row: 1;
+        object-position: center;
+    }
+
+    .hero-img-2 {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .hero-img-3 {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    .purple-bar {
+        bottom: 0;
+    }
+
+
+    .purple-bar > h2 {
+        bottom: 0;
+        padding: 5rem 0 0;
+    }
+
+    .purple-bar > p {
+        padding: 0 1rem 1.5rem;
+    }
+
+}
+
+@media (min-width: 1376px) {
+    .hero-img-3-text {
+        font-size: 1.25rem;
+    }
+    
+}
+
+/* About Page */
+
+@media (max-width: 900px) {
+
+    body {
+        background: #E7E5E5;
+    }
+
+    main {
+        padding-bottom: 62rem;
+    }
+    
+    .container-about {
+        width: 100%;
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+     }
+
+    aside {
+        font-size: 1.5rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        font-weight: 300;
+        padding: 30px 20px 100px;
+        border-radius: 10px;
+        height: auto;
+    }
+
+    .aside-first {
+        display: block;
+    }
+
+    .aside-list > ul {
+        padding-left: 1px;
+    }
+
+    section {
+        width: 100%;
+    }
+
+    .section-list > li {
+        display: block;
+    }
+
+}
+
+@media (min-width: 901px) and (max-width: 1375px) {
+
+    .container-about {
+        height: 92vh;
+    }
+
+    .toggle-button {
+        display: flex;
+        align-items: center;
+    }
+
+    .aside-first {
+        display: block;
+    }
+
+    .aside-list > ul {
+        padding-left: 1px;
+    }
+
+    .section-list > li {
+        display: block;
+    }
+}
+
+@media (min-width: 1375px) {
+ .search-bar {
+    display: none;
+ }
+
+ .container-about {
+    height: 91vh;
+ }
 }

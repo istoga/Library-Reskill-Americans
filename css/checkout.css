@@ -6,10 +6,7 @@
 }
 
 body {
-    
-}
-
-body {
+    font-size: 18px;
     font-family: "Jaldi", sans-serif;
 }
 
@@ -78,6 +75,12 @@ a:link {
     color: #000;
 }
 
+.back-btn {
+    border: none;
+    background: transparent;
+    padding: 0.5rem 1rem;
+}
+
 .form > p {
     padding-top: 2rem;
 }
@@ -117,9 +120,57 @@ a:link {
     text-align: center;
 }
 
+
+
 .book > footer {
     padding: 10rem 13.5rem 0;
     text-align: center;
     color: #E40606;
     
+}
+
+/***************** Media Queries *************/
+
+@media (max-width: 975px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 600px;
+        padding: 0;
+        margin: 0;
+        background: white;
+    }
+
+    .bar {
+        width: 100%;
+        text-align: center;
+    }
+
+    section.form {
+        width: 600px;
+    }
+
+   
+
+    section.book {
+        background: white;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .book > h3 {
+        padding: 1rem;
+    }
+
+    .book > footer {
+        padding: 0;
+    }
+}
+
+
+
+@media (min-width: 976px) and (max-width: 1375px) {
+    .book > footer  {
+        padding: 10rem 0 2rem;
+    }
 }

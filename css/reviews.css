@@ -6,14 +6,11 @@
 }
 
 body {
-    
-}
-
-body {
+    font-size: 18px;
     font-family: "Jaldi", sans-serif;
 }
 
-nav {
+nav > ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -28,8 +25,13 @@ nav {
     width: 3.5rem;
 }
 
-nav > li {
+nav > ul {
     list-style-type: none;
+}
+
+li > a {
+    text-decoration: none;
+    color: #FFFEFE;
 }
 
 .logo {
@@ -165,6 +167,7 @@ span {
 .stars-title > img {
     width: 10%;
     height: 1.75rem;
+    width: 10rem;
 }
 
 .user-review-para {

@@ -6,14 +6,11 @@
 }
 
 body {
-    
-}
-
-body {
+    font-size: 18px;
     font-family: "Jaldi", sans-serif;
 }
 
-nav {
+nav > ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -28,8 +25,13 @@ nav {
     width: 3.5rem;
 }
 
-nav > li {
+ul > li {
     list-style-type: none;
+}
+
+li > a {
+    text-decoration: none;
+    color: #fffefe;
 }
 
 .logo {
@@ -84,11 +86,18 @@ nav > li {
     margin: 0;
 }
 
+
 .sub-nav {
+    display: flex;
+    justify-content: center;
+}
+
+.sub-nav > ul {
     background: none;
     color: #000;
     display: inline;
     text-align: center;
+    padding: 2.5rem;
 }
 
 .sub-nav > ul > li {
@@ -100,12 +109,12 @@ nav > li {
 
 .container {
     width: 100%;
-    padding: 2rem 10rem;
+    padding: 1rem 5rem;
 }
 
 .container > h2 {
     text-transform: uppercase;
-    padding: 2rem 0;
+    padding: 1rem 0 2rem;
 }
 
 .book-grid {
@@ -123,3 +132,188 @@ nav > li {
     width: 15rem;
     height: auto;
 }
+
+/********* Media Queries ***************/
+
+@media (max-width: 815px) {
+
+    body {
+        background: #bdbdbd;
+        /* width: 600px; */
+
+    }
+
+    .container {
+        /* width: 500px; */
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    nav {
+        width: 100%;
+
+    }
+
+    .toggle-button {
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        display: block;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+    }
+    
+    a > .toggle {
+        height: 50px;
+        width: 100%;
+        background-color: #fff;
+        border-radius: 10px;
+    }
+
+    ul > li {
+        display: none;
+    }
+
+    .search {
+        display: none;
+    }
+
+    .sub-nav > ul {
+        padding: 1rem 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .sub-nav > ul > li {
+        display: inline;
+        padding: 0 1rem;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    h1 {
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .book-grid {
+        display: flex;
+        flex-direction: column;
+        padding: 0 1rem;
+    }
+}
+
+@media (min-width: 816px) and (max-width:1305px ) {
+    body {
+        font-size: 16px;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    .sub-nav > ul {
+        padding: 1rem 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .sub-nav > ul > li {
+        display: inline;
+        padding: 0 1rem;
+    }
+
+    .toggle-button {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        display: block;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 50px;
+        height: 21px;
+    }
+    
+    a > .toggle {
+        height: 50px;
+        width: 100%;
+        background-color: #fff;
+        border-radius: 10px;
+    }
+
+    ul > li {
+        display: none;
+    }
+
+    #menu-bars {
+        width: 50px;
+    }
+
+    .book-grid {
+        display: flex;
+        padding: 0;
+    }
+
+    .grid-book > img {
+        width: 10rem;
+    }
+
+    .doc-book {
+        width: 10rem;
+    }
+}
+
+@media (min-width: 1306px) and (max-width:1700px ) {
+   
+    body {
+        font-size: 16px;
+    }
+
+    .container {
+        margin: 0;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    li {
+        list-style-type: none;
+    }
+
+    .search-bar {
+        display: none;
+    }
+
+    
+
+    .sub-nav > ul {
+        padding: 1rem 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .sub-nav > ul > li {
+        display: inline;
+        padding: 0 1.5rem;
+    }
+
+    .book-grid {
+        display: flex;
+        padding: 0;
+    }
+
+
+}
+
+@media (min-width: 1701px) {
+    
+
+}
+

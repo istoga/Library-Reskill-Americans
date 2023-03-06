@@ -6,15 +6,12 @@
 
 body {
     font-family: "Jaldi", sans-serif;
-    /* text-align: center; */
+    font-size: 18px;
     background: url(/img/books.png) no-repeat fixed center;
     background-size: 100% 100%;
-    /* object-fit: cover;
-    object-position: center;
-    background-repeat: no-repeat; */
 }
 
-nav {
+nav > ul{
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -29,8 +26,13 @@ nav {
     width: 3.5rem;
 }
 
-nav > li {
+nav > ul {
     list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fffefe;
 }
 
 .logo {
@@ -83,6 +85,24 @@ nav > li {
     width: 2.5rem;
     padding: 0;
     margin: 0;
+}
+
+.toggle-button {
+    position: absolute;
+    top: 1.25rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 30px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
 }
 
 /* Container */
@@ -180,31 +200,190 @@ input[type="checkbox"] {
     margin: 0 -1.05rem;
 }
 
-
-
 .form-btn{
     border-radius: 1.75rem;
     padding: 20px 100px;
     color: #fffefe;
     background: #000;
     border: none;
+    font-size: 18px;
 }
 
-.form-bottom > button {
-    border-radius: 1.75rem;
-    padding: 20px 68px;
-    border: 1px solid #000;
-    background: transparent;
-    margin: 2rem 0;
+.sign-up-form {
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;;
 }
 
-.form-bottom > button > a {
+.form-btn-sign {
+    border-radius: 2rem;
+    padding: 15px 60px;
+    border: 3px solid #000;
+    background: #fff;
+    cursor: pointer;
     color: #000;
-    text-decoration: none;
 }
+
 
 .terms {
     text-align: center;
+    bottom: 0;
+    color: #5359EF;
 }
 
+/********* Media Queries ***************/
+
+@media (max-width: 815px) {
+
+    body {
+        background: #bdbdbd;
+        /* width: 600px; */
+
+    }
+
+    .container {
+        /* width: 500px; */
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    nav {
+        width: 100%;
+
+    }
+
+    .toggle-button {
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        display: block;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+    }
+    
+    a > .toggle {
+        height: 50px;
+        width: 100%;
+        background-color: #fff;
+        border-radius: 10px;
+    }
+
+    ul > li {
+        display: none;
+    }
+
+    .search {
+        display: none;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    h1 {
+        padding: 1rem;
+        text-align: center;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    .under-pass {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    hr {
+        margin: 3rem 0;
+
+}
+}
+
+@media (min-width: 816px) and (max-width:1275px ) {
+    body {
+        font-size: 16px;
+    }
+
+    .container {
+        margin: 2rem 10rem;
+    }
+
+
+    .toggle-button {
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        display: block;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+    }
+    
+    a > .toggle {
+        height: 50px;
+        width: 100%;
+        background-color: #fff;
+        border-radius: 10px;
+    }
+
+    ul > li {
+        display: none;
+    }
+
+    nav {
+
+    }
+
+    .under-pass {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+@media (min-width: 1276px) and (max-width:1700px ) {
+   
+    body {
+        font-size: 16px;
+    }
+
+    .container {
+        margin: 2rem 20rem;
+    }
+
+    .search-bar {
+        display: none;
+    }
+
+    form {
+        padding: 2rem 2rem;
+    }
+   
+    /* .under-pass {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    } */
+
+    
+
+}
+
+@media (min-width: 1701px) {
+    
+
+}
 
